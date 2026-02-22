@@ -3,8 +3,7 @@ import feedparser
 
 def get_latest_threat():
     print("Fetching latest threat report...\n")
-    # Note: You will need to insert a valid RSS feed URL in the quotes below
-    feed = feedparser.parse("") 
+    feed = feedparser.parse("https://www.bleepingcomputer.com/feed/")
     latest_story = feed.entries[0].summary
     print(f"Raw Threat Data: {latest_story}\n")
     return latest_story
